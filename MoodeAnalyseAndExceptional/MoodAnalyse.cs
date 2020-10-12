@@ -19,8 +19,9 @@ namespace MoodeAnalyseAndExceptional
                 else
                     return "HAPPY";
             }
-            catch
+            catch(Exception e)
             {
+                Console.WriteLine("Exception occurred: "+e);
                 return "HAPPY";
             }
         }

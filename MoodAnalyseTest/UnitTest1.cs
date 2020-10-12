@@ -6,12 +6,11 @@ namespace MoodAnalyseTest
     public class UnitTest1
     {
         [TestMethod]
-        [DataRow("I am in Sad Mood")]
-        [DataRow("I am in Happy Mood")]
+        [DataRow(null)]
         public void TestMethod1(string message)
         {
             //Arrange
-            string expected = "SAD";
+            string expected = "HAPPY";
             MoodAnalyse mood = new MoodAnalyse(message);
             //Act
             var result = mood.analyseMood();
