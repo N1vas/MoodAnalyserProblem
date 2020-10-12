@@ -14,6 +14,10 @@ namespace MoodeAnalyseAndExceptional
         {
             try
             {
+                if (this.message.Equals(string.Empty))
+                {
+                    throw new MoodAnalysisException(MoodAnalysisException.ExceptionType.EMPTY_MESSAGE, "Mood should not be empty");
+                }
                 if (message.Contains("sad"))
                     return "SAD";
                 else
@@ -21,8 +25,7 @@ namespace MoodeAnalyseAndExceptional
             }
             catch(Exception e)
             {
-                Console.WriteLine("Exception occurred: "+e);
-                return "HAPPY";
+                throw new MoodAnalysisException(MoodAnalysisException.ExceptionType.NULL_MESSAGE, "Mood should not be null");
             }
         }
     }
