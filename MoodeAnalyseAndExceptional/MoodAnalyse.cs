@@ -10,6 +10,9 @@ namespace MoodeAnalyseAndExceptional
         {
             this.message = message;
         }
+        public MoodAnalyse() 
+        {
+        }
         public string analyseMood()
         {
             try
